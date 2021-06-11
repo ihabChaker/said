@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/7.0.3/pusher.min.js"
+        integrity="sha512-XVnzJolpkbYuMeISFQk6sQIkn3iYUbMX3f0STFUvT6f4+MZR6RJvlM5JFA2ritAN3hn+C0Bkckx2/+lCoJl3yg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const pusher = new Pusher('3eece4878496d724be7c', {
+            cluster: 'eu',
+            useTLS: true
+        })
+        const channel = pusher.subscribe('channel1')
+        channel.bind('event', (data) => {
+            console.log(pusher)
+
+        })
+    </script>
+</body>
+
+</html>

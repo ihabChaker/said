@@ -1,0 +1,25 @@
+body {
+    font-family: sans-serif;
+}
+
+.container-app {
+    border: 1px solid black;
+    padding: 20px;
+    width: 30vw;
+    height: 50vh;
+    margin: 10vh auto;
+    position: relative;
+}
+
+.line-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}

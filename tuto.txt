@@ -1,0 +1,16 @@
+rafce creates a function that returns a componenet
+
+= (props)=>{
+    {props.name}
+}
+= ({name})=>{
+    {name}
+}
+componentName.defaultProps = {
+    name: 'jeff'
+}
+import PropTypes from 'prop-types'
+
+cmp.propTypes={
+    name:PropTypes.string
+}
