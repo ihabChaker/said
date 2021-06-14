@@ -10,18 +10,20 @@
 </head>
 
 <body>
-
+    <h1 id="title">heello</h1>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/7.0.3/pusher.min.js"
         integrity="sha512-XVnzJolpkbYuMeISFQk6sQIkn3iYUbMX3f0STFUvT6f4+MZR6RJvlM5JFA2ritAN3hn+C0Bkckx2/+lCoJl3yg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+        const title = document.getElementById("title")
+        title.innerText = "hello world"
         const pusher = new Pusher('3eece4878496d724be7c', {
             cluster: 'eu',
             useTLS: true
         })
-        const channel = pusher.subscribe('channel1')
-        channel.bind('event', (data) => {
-            console.log(pusher)
+        const channel = pusher.subscribe('agent-maintenance-' + 1);
+        channel.bind('panne', (data) => {
+            console.log(data)
 
         })
     </script>
